@@ -21,7 +21,7 @@ try:
             # Generate temperature plot
             temperature = [dict["main"]["temp"] for dict in filtered_data]
             dates = [dict["dt_txt"] for dict in filtered_data]
-            figure = px.line(x=dates, y=[temp/10 for temp in temperature], labels={"x": "Date", "Y": "Temperature (C)"})
+            figure = px.line(x=dates, y=[temp-273.15 for temp in temperature], labels={"x": "Date", "Y": "Temperature (C)"})
             st.plotly_chart(figure)
 
         if option == "Sky":
