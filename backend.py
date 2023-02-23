@@ -15,4 +15,4 @@ def get_data(place, forecaste_days=None):
 
 
 if __name__ == "__main__":
-    print(get_data(place="Beijing", forecaste_days= 3, kind='Sky'))
+    print(get_data(place="Beijing", forecaste_days= 3))
